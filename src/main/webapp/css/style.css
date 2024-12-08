@@ -1,0 +1,370 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white; /* Changed to white */
+    color: black; /* Ensure text is visible on a white background */
+}
+
+/* Title Container */
+.title-container {
+    background-color: #8B0000; /* Dark red color */
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+}
+
+.main-title {
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #FF5733; /* Dark color for the header */
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF; /* Light background */
+}
+
+/* Basic nav styling */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: black; /* Change text color to black */
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.nav-links a:hover {
+    color: white; /* Change text color to white on hover */
+    background-color: rgba(255, 87, 51, 0.7); /* Highlight background color on hover */
+    transition: 0.3s;
+}
+
+/* Section Styling */
+section {
+    padding: 100px 10px;
+    margin-top: 10px;
+}
+
+#home {
+    min-height: 100vh;
+}
+
+#about, #contact {
+    min-height: 100vh;
+}
+
+/* Dropdown Sections */
+.dropdown-section {
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    margin: 0px 0;
+    color: black; /* Ensuring text visibility on light background */
+}
+
+/* About Us specific adjustment */
+#about-us {
+    padding: 20px 15px; 
+    margin-top: 0px; /* Reduced space between slider and About Us section */
+}
+
+#mission, #our-team {
+    padding: 10px 20px; /* Reduced padding for these sections */
+    margin-top: 30px; /* Reduced margin between sections */
+}
+
+/* Contact Section Styling */
+#contact {
+    background-color: rgba(0, 0, 0, 0.1); /* Transparent black background */
+    color: white;
+    padding: 30px 20px;
+}
+
+#contact h1, #contact h2, #contact p {
+    color: black;
+    margin-bottom: 10px; /* Reduce margin between headings and paragraphs */
+}
+
+#contact-form, #support {
+    padding: 10px 0; /* Reduce padding between Contact Form and Support */
+    margin-top: 20px; /* Reduce margin between sections */
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    display: none;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#scrollTopBtn:hover {
+    background-color: #555;
+}
+
+/* Slider Styling */
+.slider {
+    width: 100%;
+    max-width: 1500px; /* Set a maximum width */
+    margin: 0 auto; /* Center the slider */
+    position: relative;
+    overflow: hidden;
+    height: 1000px; /* Set a height for the slider */
+    margin-bottom: 0px; /* Reduce the space below the slider */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%; /* Adjust height to fit the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+    display: block;
+}
+
+/* Auth Links (Login/Signup) Styling */
+.auth-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-left: auto; /* Aligns the links to the right */
+}
+
+.auth-links li {
+    margin-left: 20px;
+}
+
+.auth-links a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+.auth-links a:hover {
+    background-color: #555;
+    transition: 0.3s;
+}
+
+/* Login and Signup Form Styling */
+.wrapper {
+    overflow: hidden;
+    max-width: 390px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 160px;
+}
+
+.wrapper .title-text {
+    display: flex;
+    width: 200%;
+}
+
+.wrapper .title {
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .slide-controls {
+    position: relative;
+    display: flex;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+    border-radius: 15px;
+}
+
+.slide-controls .slide {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+}
+
+.slide-controls label.signup {
+    color: #000;
+}
+
+.slide-controls .slider-tab {
+    position: absolute;
+    height: 100%;
+    width: 250%;
+    left: 0;
+    z-index: 0;
+    border-radius: 15px;
+    background: -webkit-linear-gradient(left, #003366, #003366);
+    transition: all 0.6s ease;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#signup:checked ~ .slider-tab {
+    left: 50%;
+}
+
+#signup:checked ~ label.signup {
+    color: #fff;
+    cursor: default;
+    user-select: none;
+}
+
+#signup:checked ~ label.login {
+    color: #000;
+}
+
+#login:checked ~ label.signup {
+    color: #000;
+}
+
+.wrapper .form-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container .form-inner {
+    display: flex;
+    width: 200%;
+}
+
+.form-container .form-inner form {
+    width: 50%;
+    transition: all 0.6s ease;
+}
+
+.form-container .form-inner form .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-container .form-inner form .field input {
+    height: 100%;
+    width: 100%;
+    padding-left: 15px;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+    border-bottom-width: 2px;
+    font-size: 17px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-container .form-inner form .field input:focus {
+    border-color: #003366;
+}
+
+.form-container .form-inner form .field button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 15px;
+    background: #003366;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-container .form-inner form .field button:hover {
+    background: #003366;
+}
